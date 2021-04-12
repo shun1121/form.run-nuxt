@@ -94,8 +94,8 @@ export default {
     // },
 
     post() {
-      if (!this.$refs.form.validate()) {
-        console.log("out")
+      if (this.$refs.form.validate()) {
+        console.log("ok")
         event.preventDefault()
       
       // if (this.name == '' || this.email == '' || this.blog == '' || this.subject || '' || this.message == '') {
@@ -103,6 +103,7 @@ export default {
       //   event.preventDefault()
       } else {
         console.log("else")
+        event.preventDefault()
       }
     },
   },
