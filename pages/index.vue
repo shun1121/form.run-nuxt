@@ -94,9 +94,13 @@ export default {
     // },
 
     post() {
-      if (this.name == '' || this.email == '' || this.blog == '' || this.subject || '' || this.message == '') {
+      if (!this.$refs.form.validate()) {
         console.log("out")
         event.preventDefault()
+      
+      // if (this.name == '' || this.email == '' || this.blog == '' || this.subject || '' || this.message == '') {
+      //   console.log("out")
+      //   event.preventDefault()
       } else {
         console.log("else")
       }
