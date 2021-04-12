@@ -67,7 +67,7 @@ export default {
       blog: '',
       subject: '',
       message: '',
-      isErrorMessage: [],
+      // isErrorMessage: [],
       formRules: [
         value => !!value || "必ず入力してください。"
       ],
