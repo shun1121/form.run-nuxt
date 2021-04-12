@@ -98,13 +98,13 @@ export default {
         console.log("ok")
         event.preventDefault()
       
-      // if (this.name == '' || this.email == '' || this.blog == '' || this.subject || '' || this.message == '') {
-      //   console.log("out")
-      //   event.preventDefault()
       } else {
         console.log("else")
         event.preventDefault()
       }
+        // if (this.name == '' || this.email == '' || this.blog == '' || this.subject || '' || this.message == '') {
+        //   console.log("out")
+        //   event.preventDefault()
     },
   },
 }
