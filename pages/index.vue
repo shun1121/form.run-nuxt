@@ -94,7 +94,7 @@ export default {
     },
 
     post() {
-      if (!this.$refs.form.validate()) {
+      if (this.name == '' || this.email == '' || this.blog == '' || this.subject || '' || this.message == '') {
         console.log(this.name, this.email, this.subject)
         event.preventDefault()
       } else {
