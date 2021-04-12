@@ -95,7 +95,7 @@ export default {
 
     post() {
       if (this.name == '' || this.email == '' || this.blog == '' || this.subject || '' || this.message == '') {
-        console.log(this.name, this.email, this.subject)
+        console.log("out")
         event.preventDefault()
       } else {
         console.log("else")
