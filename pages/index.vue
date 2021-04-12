@@ -6,7 +6,7 @@
          label="お名前"
          class="mt-3"
          v-model="name"
-         :error-messages="isErrorMessage"
+         :rules="formRules"
         />
         <v-text-field
          label="メールアドレス"
@@ -78,20 +78,20 @@ export default {
     }
   },
 
-  watch: {
-    name: function (value) {
-      this.validation(value)
-    }
-  },
+  // watch: {
+  //   name: function (value) {
+  //     this.validation(value)
+  //   }
+  // },
 
   methods: {
-    validation(value) {
-      if (!value) {
-        this.isErrorMessage = [ '必ず入力してください。' ]
-      } else {
-        this.isErrorMessage = []
-      }
-    },
+    // validation(value) {
+    //   if (!value) {
+    //     this.isErrorMessage = [ '必ず入力してください。' ]
+    //   } else {
+    //     this.isErrorMessage = []
+    //   }
+    // },
 
     post() {
       if (this.name == '' || this.email == '' || this.blog == '' || this.subject || '' || this.message == '') {
