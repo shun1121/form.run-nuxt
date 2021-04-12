@@ -94,9 +94,10 @@ export default {
     },
 
     post() {
-      this.$refs.form.validate()
-      console.log(this.name, this.email, this.subject)
-      // event.preventDefault()
+      if (!this.$refs.form.validate()) {
+        console.log(this.name, this.email, this.subject)
+        event.preventDefault()
+      }
     },
   },
 }
