@@ -67,7 +67,6 @@ export default {
       blog: '',
       subject: '',
       message: '',
-      // isErrorMessage: [],
       formRules: [
         value => !!value || "必ず入力してください。"
       ],
@@ -78,33 +77,16 @@ export default {
     }
   },
 
-  // watch: {
-  //   name: function (value) {
-  //     this.validation(value)
-  //   }
-  // },
-
   methods: {
-    // validation(value) {
-    //   if (!value) {
-    //     this.isErrorMessage = [ '必ず入力してください。' ]
-    //   } else {
-    //     this.isErrorMessage = []
-    //   }
-    // },
-
     post() {
       if (this.$refs.form.validate()) {
         console.log("ok")
-        event.preventDefault()
+        // event.preventDefault()
       
       } else {
-        console.log("else")
+        console.log("follow validation rules")
         event.preventDefault()
       }
-        // if (this.name == '' || this.email == '' || this.blog == '' || this.subject || '' || this.message == '') {
-        //   console.log("out")
-        //   event.preventDefault()
     },
   },
 }
